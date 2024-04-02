@@ -1,0 +1,30 @@
+.heading {
+  color: black;
+  background-color: rgb(241, 100, 18);
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+.container {
+  margin-left: 10.5%;
+  margin-top: 11%;
+  margin-right: 10.5%;
+  margin-bottom: 10px;
+}
+.btn {
+  border-radius: 0px;
+  background-color: rgba(6, 104, 240, 0.651);
+  font-size: large;
+  margin-bottom: 20px;
+}
+.form-control {
+  border-radius: 0px;
+  margin-bottom: 8px;
+}
+p {
+  color: rgb(3, 98, 75);
+}
+body {
+  background-color: coral;
+}

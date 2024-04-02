@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>world counter</title>
+     <style>
+     body{
+         padding: 0px 100px;
+     }
+     h1{
+         text-align: center;
+         background-color: darkblue;
+         color: yellow;
+         padding: 10px;
+         margin:0px;
+     }
+     #textbox{
+         width:99.1%;
+         border-color: rgb(232, 236, 14);
+         font-size: 15px;
+     }
+     p{
+         text-align: center;
+         background-color: darkblue;
+         font-size: 26px;
+         font-weight: bold;
+         color: white;
+         padding: 10px;
+         margin: 0px;
+         
+     }
+
+     </style>
+</head>
+
+<body>
+    <h1>world and character counter</h1>
+    <textarea  id="textbox" cols="30" rows="10"></textarea>
+    <p>
+       <span id="word">0</span> words and 
+       <span id="char">0</span> characters
+    </p>
+    <script>
+        let textbox=document.getElementById("textbox");
+        textbox.addEventListener('input',function(){//add event in text box 
+            var text=this.value;
+            let char=text.length;//claculating text length
+            document.getElementById("char").innerHTML=char;//
+            text=text.trim();//cut the first and last space 
+            let words=text.split(" ");//split is used for make space b/w charcter
+            var cleanlist=words.filter(function(elm){
+              return elm !="";//return elm is not equal to space 
+            });
+            console.log(cleanlist);
+            document.getElementById("word").innerHTML=cleanlist.length;//output
+            });
+
+    </script>
+</body>
+</html>
